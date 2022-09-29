@@ -2,22 +2,24 @@
     {
         "id":1,
       "imagesdata": "https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_LastMinute_imgB_900x600_20211101.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh",
-      "uitk-heading": "Last-minute deals",
-      "uitk-text": "Getaway today"
+      "uitkheading": "Last-minute deals",
+      "uitktext": "Getaway today"
     },
     {"id":2,
       "imagesdata": "https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_AllInclusive_imgB_900x600_20211101.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh",
-      "uitk-heading": "All-inclusive resorts",
-      "uitk-text": "Enjoy sun and fun"
+      "uitkheading": "All-inclusive resorts",
+      "uitktext": "Enjoy sun and fun"
     },
     {"id":3,
       "imagesdata": "https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_MOD_imgB_900x600_20211101.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh",
-      "uitk-heading": "Insider Prices",
-      "uitk-text": "Members get rewarded"
+      "uitkheading": "Insider Prices",
+      "uitktext": "Members get rewarded"
     },
     {"id":4,
         "imagesdata": "https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_MOD_imgB_900x600_20211101.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh",
-        "uitk-heading": "Insider Prices",
-        "uitk-text": "Members get rewarded"
+        "uitkheading": "Insider Prices",
+        "uitktext": "Members get rewarded"
       }
+
+     
   ]

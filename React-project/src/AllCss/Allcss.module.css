@@ -1,0 +1,44 @@
+
+
+.bigparent {
+  border: 1px solid black;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00253c;
+  /* height: 100px; */
+}
+
+.firstchild {
+  display: flex;
+  justify-content: space-between;
+  width: 27%;
+  height: auto;
+  align-items: center;
+  border: 1px solid black;
+  margin-left: 30px;
+  background: none;
+}
+.secondchild {
+  border: 1px solid black;
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 50px;
+}
+.bigparent a {
+  color: white;
+}
+.images {
+  background: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/01/ORB_Storefront_6_imgB_1400x600_20211028.jpg?impolicy=fcrop&w=900&h=225&q=mediumHigh");
+  height: 320px;
+  border: 1px solid black;
+}
+.formcenter {
+  background-color: white;
+  width: 90%;
+  height: 20vw;
+  margin-top: 20px;
+}
