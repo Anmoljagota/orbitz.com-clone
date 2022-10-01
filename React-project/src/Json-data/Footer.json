@@ -1,0 +1,41 @@
+{
+    "name":[
+        {
+            "data":"About",
+"explore":"Hotels in United States"
+        },
+        {
+            "data":"Jobs",
+"explore":"Vacation Rentals in United States"
+        },
+        {
+            "data":"List your property",
+"explore":"Car Rentals in United States"
+        },
+        {
+            "data":"Partnerships",
+"explore":"Domestic flights"
+        },
+        {
+            "data":"Newroom",
+"explore":"Vacation Packages in United States"
+        },
+        {
+            "data":"Investor Relation",
+            "explore":"Orbitz Reviews"
+
+        },
+        {
+            "data":"Site map",
+"explore":"Orbitz coupons"
+        },
+        {
+            "data":"Orbitz reward",
+"explore":"LGBTQ level"
+        },
+        {
+            "data":"Advertising",
+            "explore":"Travel Blogs"
+        }
+    ]
+}

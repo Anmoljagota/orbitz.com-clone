@@ -1,0 +1,27 @@
+/* *{
+   
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+} */
+.mainbox{
+border:1px solid black;
+width: 50%;
+margin: auto;
+height: 250vw;
+background-color: white;
+}
+.minimain{
+    /* border:1px solid black; */
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+.badge{
+    background-color:#0E8445;
+    color:white;
+    border-radius:5px;
+   padding: 5px;
+    margin-right: 15px
+}

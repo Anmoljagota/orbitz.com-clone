@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import Styles from "../AllCss/Allcss.module.css";
+
 import {
   Center,
   Select,
@@ -10,12 +11,15 @@ import {
   Input,
   InputRightElement,
   Button,
+  Skeleton,
 } from "@chakra-ui/react";
+import Footer from "../components/Footer";
 import { NavLink } from "react-router-dom";
 import Styles1 from "../AllCss/booking.module.css";
 import data from "../Json-data/db.json";
 import data1 from "../Json-data/db1.json"
 import { PhoneIcon, CheckIcon } from "@chakra-ui/icons";
+import Form from "../components/Form";
 import Accordion from "../components/Accordion";
 const Links = [
   { path: "/", title: "Stays" },
@@ -26,15 +30,19 @@ const Links = [
   { path: "/cruises", title: "Cruises" },
 ];
 const Common = ({ details, newdata }) => {
+  const [isloading,setisLoading]=useState(false);
  const {name}=data1;
-
+setTimeout(() => {
+  setisLoading(true)
+}, 3000);
   return (
     <Box className={Styles1.upperdiv}>
+        <Skeleton isLoaded={isloading}>
       <Box className={Styles.images}>
         <div>
           <Center>
             <Box className={Styles.formcenter}>
-              <Box>
+              <Box >
                 <Box
                   w="100%"
                   p={4}
@@ -45,7 +53,7 @@ const Common = ({ details, newdata }) => {
                     justifyContent: "space-around",
                     width: "40%",
                     margin: "auto",
-                    border: "1px solid black",
+                  
                   }}
                 >
                   {Links.map((link) => (
@@ -62,8 +70,10 @@ const Common = ({ details, newdata }) => {
                   ))}
                 </Box>
               </Box>
+            <Form/>
             </Box>
           </Center>
+       
         </div>
         <Center>
           <Box className={Styles1.main}>
@@ -122,6 +132,36 @@ const Common = ({ details, newdata }) => {
                 src="https://tpc.googlesyndication.com/simgad/6539207353325327194?"
                 alt=""
                 style={{ height: "130px", width: "35%" }}
+              />
+            </Box>
+            <Box
+              style={{
+                display: "flex",
+                marginTop: "30px",
+                border: "1px solid black",
+                justifyContent: "space-between",
+              }}
+            >
+              <img
+                src="https://tpc.googlesyndication.com/simgad/14760604655562023227?"
+                alt="error"
+                style={{ height: "250px", width: "60%", position: "relative" }}
+              />
+              <h1
+                style={{
+                  position: "absolute",
+                  color: "white",
+                  margin: "100px 0px 0px 15px",
+                  fontWeight: "900",
+                }}
+              >
+                Today's top deals
+              </h1>
+
+              <img
+                src="https://forever.travel-assets.com/flex/flexmanager/images/2020/10/20/AdobeStock_276966704_coloredit10.png?impolicy=fcrop&w=900&h=225&q=mediumHigh4?"
+                alt=""
+                style={{ height: "250px", width: "35%" }}
               />
             </Box>
 
@@ -199,114 +239,12 @@ const Common = ({ details, newdata }) => {
         </Center>
        
 <Accordion />
+<Footer/>
       </Box>
+      </Skeleton>
     </Box>
   );
 };
 
 export default Common;
 
-/*[
-  {
-    "uitk-image-media src": "https://forever.travel-assets.com/flex/flexmanager/images/2022/02/09/ORB_BrandPromise_TravelAsYouAre_imgB_840x473_20220207.jpg?impolicy=fcrop&w=900&h=386&q=mediumHigh",
-    "uitk-card-link href": "https://www.orbitz.com/lp/lgbtq-gay-travel-hotels?rfrr=call-to-action.undefined.click",
-    "uitk-image-media src 2": "https://forever.travel-assets.com/flex/flexmanager/images/2022/02/09/ORB_BrandPromise_Rewards_imgB_840x473_20220207.jpg?impolicy=fcrop&w=900&h=386&q=mediumHigh",
-    "uitk-card-link href 2": "https://www.orbitz.com/rewards/?rfrr=call-to-action.undefined.click",
-    "uitk-image-media src 3": "https://forever.travel-assets.com/flex/flexmanager/images/2022/02/09/ORB_BrandPromise_InsiderPrices_imgB_840x473_20220207.jpg?impolicy=fcrop&w=900&h=386&q=mediumHigh",
-    "uitk-card-link href 3": "https://www.orbitz.com/member-discounts?rfrr=call-to-action.undefined.click",
-    "uitk-heading": "",
-    "uitk-heading 2": "",
-    "uitk-text": "",
-    "is-visually-hidden": "",
-    "uitk-heading 3": "",
-    "uitk-text 2": "",
-    "uitk-heading 4": "",
-    "uitk-text 3": "",
-    "uitk-text 4": ""
-  },
-  {
-    "uitk-image-media src": "https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_LastMinute_imgB_900x600_20211101.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh",
-    "uitk-card-link href": "https://www.orbitz.com/lp/deals/last-minute?rfrr=editorial.Last-minute_deals.click",
-    "uitk-image-media src 2": "https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_AllInclusive_imgB_900x600_20211101.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh",
-    "uitk-card-link href 2": "https://www.orbitz.com/lp/deals/all-inclusive?rfrr=editorial.All-inclusive_resorts.click",
-    "uitk-image-media src 3": "https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_MOD_imgB_900x600_20211101.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh",
-    "uitk-card-link href 3": "https://www.orbitz.com/member-discounts?rfrr=editorial.Insider_Prices.click",
-    "uitk-heading": "Featured offers",
-    "uitk-heading 2": "Last-minute deals",
-    "uitk-text": "Getaway today",
-    "is-visually-hidden": "Last-minute deals",
-    "uitk-heading 3": "All-inclusive resorts",
-    "uitk-text 2": "Enjoy sun and fun",
-    "uitk-heading 4": "Insider Prices",
-    "uitk-text 3": "Members get rewarded",
-    "uitk-text 4": "Fly somewhere beachy and warm"
-  },
-  {
-    "uitk-image-media src": "https://forever.travel-assets.com/flex/flexmanager/images/2020/12/03/ORB_Storefront_Deals_2740x1484-V1.jpg",
-    "uitk-card-link href": "https://www.orbitz.com/deals/?rfrr=editorial.Today%27s_top%20deals.click",
-    "uitk-image-media src 2": "",
-    "uitk-card-link href 2": "",
-    "uitk-image-media src 3": "",
-    "uitk-card-link href 3": "",
-    "uitk-heading": "",
-    "uitk-heading 2": "",
-    "uitk-text": "",
-    "is-visually-hidden": "Today's top deals",
-    "uitk-heading 3": "",
-    "uitk-text 2": "",
-    "uitk-heading 4": "",
-    "uitk-text 3": "",
-    "uitk-text 4": ""
-  },
-  {
-    "uitk-image-media src": "https://forever.travel-assets.com/flex/flexmanager/images/2021/04/08/icon__mode_edit.svg",
-    "uitk-card-link href": "",
-    "uitk-image-media src 2": "https://forever.travel-assets.com/flex/flexmanager/images/2021/04/08/icon__monetization_on.svg",
-    "uitk-card-link href 2": "",
-    "uitk-image-media src 3": "https://forever.travel-assets.com/flex/flexmanager/images/2021/04/08/icon__chat.svg",
-    "uitk-card-link href 3": "",
-    "uitk-heading": "Here to help keep you on the move",
-    "uitk-heading 2": "Change or cancel a trip",
-    "uitk-text": "Make updates to your itinerary or cancel a booking",
-    "is-visually-hidden": "Change or cancel a trip",
-    "uitk-heading 3": "Use a credit or coupon",
-    "uitk-text 2": "Apply a coupon code or credit to a new trip",
-    "uitk-heading 4": "Track your refund",
-    "uitk-text 3": "Check the status of a refund currently in progress",
-    "uitk-text 4": ""
-  },
-  {
-    "uitk-image-media src": "https://forever.travel-assets.com/flex/flexmanager/images/2021/11/18/ORB_Blog_NationalParks_imgB_1199x399_20211117.jpg",
-    "uitk-card-link href": "",
-    "uitk-image-media src 2": "https://forever.travel-assets.com/flex/flexmanager/images/2021/11/18/ORB_Blog_RoadTrips_imgB_1199x399_20211117.jpg",
-    "uitk-card-link href 2": "",
-    "uitk-image-media src 3": "",
-    "uitk-card-link href 3": "",
-    "uitk-heading": "Traveling tips",
-    "uitk-heading 2": "",
-    "uitk-text": "National Parks",
-    "is-visually-hidden": "",
-    "uitk-heading 3": "",
-    "uitk-text 2": "There's plenty to keep you busy.",
-    "uitk-heading 4": "",
-    "uitk-text 3": "The perfect road trip",
-    "uitk-text 4": "Find an adventure for every season."
-  },
-  {
-    "uitk-image-media src": "",
-    "uitk-card-link href": "",
-    "uitk-image-media src 2": "",
-    "uitk-card-link href 2": "",
-    "uitk-image-media src 3": "",
-    "uitk-card-link href 3": "",
-    "uitk-heading": "More destinations",
-    "uitk-heading 2": "",
-    "uitk-text": "Destination deals",
-    "is-visually-hidden": "",
-    "uitk-heading 3": "",
-    "uitk-text 2": "Top hotel beach destinations",
-    "uitk-heading 4": "",
-    "uitk-text 3": "Top hotel city destinations",
-    "uitk-text 4": "Top vacation destinations"
-  }
-] */

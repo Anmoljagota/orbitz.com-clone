@@ -1,16 +1,16 @@
 *{
   background-repeat: no-repeat;
 
-
+ 
   box-sizing: border-box;
   cursor: default;
   margin: 0px;
   padding: 0px;
 }
 
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
 .App-logo {
   height: 40vmin;
