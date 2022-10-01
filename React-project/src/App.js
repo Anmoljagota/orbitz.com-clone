@@ -6,10 +6,10 @@ import Signup from './components/Signup';
 function App() {
   return (
     <div className="App">
-     {/* <Particulardata/> */}
-    {/* <Navbar/>
-    <AllRoutes/> */}
-    <Signup/>
+     <Navbar/>
+     {/* <Particulardata/>  */}
+    <AllRoutes/>
+    {/* <Signup/> */}
     </div>
   );
 }

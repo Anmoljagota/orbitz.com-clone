@@ -13,13 +13,12 @@
   }
   .btn{
     background-color: #C83259;
+    display: flex;
     color: #FFFFFF;
     border-radius: 2px;
     font-size: 1rem;
     line-height: 1.25rem;
-    min-block-size: 3rem
-rem
-;
+    min-block-size: 3rem;
     padding: 15px 43px 15px 43px;
     align-items: center;
     border-style: solid;

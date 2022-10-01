@@ -7,6 +7,7 @@ import {
   Stack,
   Text,
   useDisclosure,
+  Center
 } from "@chakra-ui/react";
 import React from "react";
 import Styles from "../AllCss/Form.module.css";
@@ -94,7 +95,10 @@ const Form = () => {
           </Checkbox>
         </Stack>
       </Box>
+      <Center>
+
     <Link to="/particular"> <button className={Styles.btn}>Search</button></Link> 
+      </Center>
     </div>
   );
 };

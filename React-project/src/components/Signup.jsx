@@ -1,9 +1,12 @@
-import { Box, Center, Checkbox, Input } from "@chakra-ui/react";
+import { Box, Center, Checkbox,  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator} from "@chakra-ui/react";
 import React from "react";
 import Styles from "../AllCss/Login.module.css";
 const Signup = () => {
   return (
-    <div>
+    <div style={{height:"60vw"}}>
         <Box style={{ border: "1px solid gray" ,padding:"10px"}}>
            
       <Center>
@@ -28,6 +31,17 @@ const Signup = () => {
        <h5 style={{color:"black",fontSize:"13px"}}>By creating an account, I agree to the Orbitz Terms and Conditions, Privacy Statement and Orbitz Rewards Terms and Conditions.</h5><br/>
 <button className={Styles.btn1}>Continue</button>
         </Box>
+        
+        </Center>
+        <Center>
+
+        <Box style={{display:'flex',fontSize:"15px",marginTop:"10px"}}>Already have an account?
+        <Breadcrumb >
+  <BreadcrumbItem>
+    <BreadcrumbLink href='#' ><span style={{color:"blue"}}>Sign in</span></BreadcrumbLink>
+  </BreadcrumbItem>
+</Breadcrumb>
+  </Box>
         </Center>
     </div>
   );

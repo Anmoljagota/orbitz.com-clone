@@ -1,7 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom"; 
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverHeader,
+  PopoverBody,
+  PopoverFooter,
+  PopoverArrow,
+  PopoverCloseButton,
+  PopoverAnchor,
+  Input,
+  Portal,
+  Button,
+} from "@chakra-ui/react";
 import {
   Box,
-  Button,
+ 
   Menu,
   MenuButton,
   MenuItem,
@@ -9,8 +24,9 @@ import {
   Text,
 } from "@chakra-ui/react";
 import Styles from "../AllCss/Allcss.module.css";
+import Styles1 from "../AllCss/Login.module.css";
 import { ChevronDownIcon } from "@chakra-ui/icons";
-import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <Box className={Styles.bigparent}>
@@ -30,12 +46,13 @@ const Navbar = () => {
           >
             More travel
           </MenuButton>
-          <MenuList>
-            <MenuItem>Download</MenuItem>
-            <MenuItem>Create a Copy</MenuItem>
-            <MenuItem>Mark as Draft</MenuItem>
-            <MenuItem>Delete</MenuItem>
-            <MenuItem>Attend a Workshop</MenuItem>
+          <MenuList className={Styles.lastcolor}>
+            <MenuItem>Stays</MenuItem>
+            <MenuItem>Flights</MenuItem>
+            <MenuItem>Packages</MenuItem>
+            <MenuItem>Cars</MenuItem>
+            <MenuItem>Cruises</MenuItem>
+            <MenuItem>Things to do</MenuItem>
           </MenuList>
         </Menu>
       </Box>
@@ -44,7 +61,38 @@ const Navbar = () => {
         <Link to="/property">List your property</Link>
         <Link to="/support">Supports</Link>
         <Link to="/trips">Trips</Link>
-        <Link to="/login">Sign in</Link>
+      <Box style={{color:"white"}}>
+
+
+          {" "}
+          <Popover>
+            <PopoverTrigger>
+             <h1 style={{cursor:"pointer"}}>Sign in</h1>
+            </PopoverTrigger>
+            <Portal>
+              <PopoverContent>
+                <PopoverArrow />
+                <PopoverHeader><span style={{width:"90%",fontSize:"17px",fontWeight:"700"}}>Members can access discounts, points and special features</span></PopoverHeader>
+                <PopoverCloseButton />
+                <PopoverBody>
+                <Link to="/login"><button className={Styles1.popbtn}>Sign in</button></Link>
+                </PopoverBody>
+                <PopoverBody>
+               <Link to="/signup"> <span className={Styles1.createaccount}>Create a free account</span></Link>
+                </PopoverBody>
+                <PopoverBody>
+               List of favourites
+                </PopoverBody>
+                <PopoverBody>
+               Loyality of program
+                </PopoverBody>
+                <PopoverFooter style={{marginTop:"20px"}}>Feedback</PopoverFooter>
+              </PopoverContent>
+            </Portal>
+          </Popover>
+     
+      </Box>
+       
       </Box>
     </Box>
   );

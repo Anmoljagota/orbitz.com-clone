@@ -14,3 +14,13 @@
     width:100%;
     padding: 10px;
 }
+.popbtn{
+    background-color:#C83259;
+  padding: 7px 115px 7px 115px;
+  color:white;
+  font-weight: 600;
+}
+.createaccount{
+    color: #007E8F;
+    margin-left: 60px;
+}

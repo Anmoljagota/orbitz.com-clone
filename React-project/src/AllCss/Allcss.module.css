@@ -1,13 +1,14 @@
 
 
 .bigparent {
-  border: 1px solid black;
+ 
   padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #00253c;
   /* height: 100px; */
+
 }
 
 .firstchild {
@@ -16,12 +17,12 @@
   width: 27%;
   height: auto;
   align-items: center;
-  border: 1px solid black;
+background-color: #00253c;
   margin-left: 30px;
   background: none;
 }
 .secondchild {
-  border: 1px solid black;
+  background-color: #00253c;
   width: 35%;
   display: flex;
   align-items: center;
@@ -30,15 +31,46 @@
 }
 .bigparent a {
   color: white;
+  cursor:pointer;
 }
 .images {
   background: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/01/ORB_Storefront_6_imgB_1400x600_20211028.jpg?impolicy=fcrop&w=900&h=225&q=mediumHigh");
   height: 320px;
-  border: 1px solid black;
+ 
 }
 .formcenter {
   background-color: white;
   width: 90%;
   height: 20vw;
   margin-top: 20px;
+}
+.mainbox{
+ 
+  width: 90%;
+  margin: auto;
+display: flex;
+color: #007E8F;
+justify-content: space-around;
+font-size: 11px;
+margin-top: 50px;
+background-color: #f5f5f5;
+cursor:pointer;
+}
+.lastcolor{
+  color: #007E8F;
+}
+.Allcss_lastcolor__yKVAK>button{
+  color: #007E8F;
+}
+a{
+  margin-top: 20px;
+}
+.breadcrumb{
+  width:70%;
+  margin:auto;
+  font-size:13px;
+  margin-top:12px;
+  
+  color: #007E8F;
+
 }

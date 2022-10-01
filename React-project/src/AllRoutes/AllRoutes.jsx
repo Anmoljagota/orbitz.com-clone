@@ -7,7 +7,8 @@ import Property from '../Pages/Property'
 import Support from '../Support'
 import Trips from '../Pages/Trips'
 import Login from '../Pages/Login'
-import Particulardata from '../Pages/Particulardata'
+import Particulardata from '../Pages/Particulardata';
+import Signup from '../components/Signup'
 const AllRoutes = () => {
   return (
     <div>
@@ -20,6 +21,7 @@ const AllRoutes = () => {
         <Route path="/trip" element={<Trips/>}></Route>
         <Route path="/login" element={<Login/>}></Route>
         <Route path="/particular" element={<Particulardata/>}></Route>
+        <Route path="/signup" element={<Signup/>}></Route>
         </Routes>
     </div>
   )
