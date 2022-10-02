@@ -67,7 +67,7 @@ const Navbar = () => {
           {" "}
           <Popover>
             <PopoverTrigger>
-             <h1 style={{cursor:"pointer"}}>Sign in</h1>
+             <h1 style={{cursor:"pointer",marginTop:"15px"}}>Sign in</h1>
             </PopoverTrigger>
             <Portal>
               <PopoverContent>

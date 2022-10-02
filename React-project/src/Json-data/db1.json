@@ -3,27 +3,33 @@
 
     {
     "id":5,
-    "name":"Flights under 200"
+    "name":"Flights under 200",
+    "deals":"Destination deals"
   },
   {
     "id":6,
-    "name":"Travel deals"
+    "name":"Travel deals",
+    "deals":"Top hotel beach destination"
   },
   {
     "id":7,
-    "name":"Hotels Under 100"
+    "name":"Hotels Under 100",
+    "deals":"Top hotel city destination"
   },
   {
     "id":8,
-    "name":"Orbitz Hotel Coupon"
+    "name":"Orbitz Hotel Coupon",
+    "deals":"Top vacations destinations"
   },
   {
     "id":9,
-    "name":"All Our Destination"
+    "name":"All Our Destination",
+    "deals":"Top fligts destinations"
   },
   {
     "id":5,
-    "name":"Flights under 200"
+    "name":"Flights under 200",
+    "deals":"Top cars destinations in america"
   }
 
 ]

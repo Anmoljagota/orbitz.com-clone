@@ -28,10 +28,12 @@ const Accodion = () => {
                       <Box
                         flex="1"
                         textAlign="left"
-                        color="Gray38 "
-                        font-weight="700"
+                        color="Gray"
+                        font-weight="900"
+                        fontSize="18px"
+                        cursor="pointer"
                       >
-                        Destination Deals
+                        {item.deals}
                       </Box>
                       <AccordionIcon />
                     </AccordionButton>

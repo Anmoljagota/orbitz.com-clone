@@ -9,6 +9,7 @@ import Trips from '../Pages/Trips'
 import Login from '../Pages/Login'
 import Particulardata from '../Pages/Particulardata';
 import Signup from '../components/Signup'
+import PaymentPage from '../PaymentPage/PaymentPage'
 const AllRoutes = () => {
   return (
     <div>
@@ -22,6 +23,7 @@ const AllRoutes = () => {
         <Route path="/login" element={<Login/>}></Route>
         <Route path="/particular" element={<Particulardata/>}></Route>
         <Route path="/signup" element={<Signup/>}></Route>
+        <Route path="/payment" element={<PaymentPage/>}></Route>
         </Routes>
     </div>
   )

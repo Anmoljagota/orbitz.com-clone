@@ -6,6 +6,7 @@ import Restaurent from "../AllApi/Restaurent";
 import { Mycontext } from "../Context/Context";
 import Styles from "../AllCss/Particular.module.css";
 import Form from "../components/Form";
+import { Link } from "react-router-dom";
 const Particulardata = () => {
   const context = React.useContext(Mycontext);
   const { state, dispatch } = context;
@@ -27,7 +28,7 @@ const Particulardata = () => {
   return (
     <div>
       <Form />
-      <Box className={Styles.mainbox}>
+    <Link to="/payment"> <Box className={Styles.mainbox}>
         {data &&
           data.map((items, i) => (
               <Skeleton isLoaded={state.IsLoading}>
@@ -134,7 +135,7 @@ const Particulardata = () => {
             </Skeleton>
           ))}
       </Box>
-      
+      </Link> 
     </div>
   );
 };
