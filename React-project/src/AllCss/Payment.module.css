@@ -1,0 +1,48 @@
+.mainbox{
+    background: #d4d4d4;
+    border:1px solid black;
+    height: 140vw;
+}
+.navbar{
+    background: #00253c;
+    border-color: #00b1ff;
+    box-shadow: none;
+}
+body{
+    
+    color: #616161;
+    font-size: 1em;
+    line-height: 1.41176471;
+padding: 10px;
+}
+.flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+}
+.rewards{
+    background-color: #8e0099;
+    color: #fff;
+    border: 0;
+}
+.border{
+    border:1px solid gray;
+    padding: 10px;
+}
+.margintop{
+    margin-top: 15px;
+}
+.color{
+    color:black;
+    margin-top: 15px;
+}
+.last{
+    border-color: #b12747 #8f1f39 #8f1f39;
+    background: #c4204b;
+    background: linear-gradient(to top,#c4204b 0,#df3864 100%);
+    color: #fff;
+    padding:10px 60px 10px 60px;
+    margin-top: 20px;
+    margin-left: 20px;
+}

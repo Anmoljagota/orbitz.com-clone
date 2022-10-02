@@ -4,7 +4,7 @@ import { Box, Center, Checkbox,  Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbSeparator} from "@chakra-ui/react";
-
+import { Link } from 'react-router-dom';
 import Styles from "../AllCss/Login.module.css";
 const Login = () => {
   return (
@@ -29,7 +29,7 @@ const Login = () => {
        <Checkbox isInvalid>Keep me signed in</Checkbox><br/><br/>
        <h5 style={{color:"gray",fontSize:"12px"}}>Selecting this checkbox will keep you signed into your account on this device until you sign out. Do not select this on shared devices.</h5><br/>
        <h5 style={{color:"black",fontSize:"13px"}}>By creating an account, I agree to the Orbitz Terms and Conditions, Privacy Statement and Orbitz Rewards Terms and Conditions.</h5><br/>
-<button className={Styles.btn1}>Continue</button>
+<Link to="/"><button className={Styles.btn1}>Continue</button></Link>
         </Box>
         
         </Center>
