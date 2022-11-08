@@ -1,3 +1,4 @@
+//All form information
 import {
   Box,
   Button,
@@ -69,15 +70,16 @@ const Form = () => {
           border= "1px solid grey"
           bg="white"
         >
-          Use Overlay two
+        Travelers
         </Button>
         <Modal isCentered isOpen={isOpen} onClose={onClose}>
           {overlay}
           <ModalContent>
-            <ModalHeader>Modal Title</ModalHeader>
+            <ModalHeader>Rooms</ModalHeader>
             <ModalCloseButton />
             <ModalBody>
-              <Text>Custom backdrop filters!</Text>
+              <Text><span style={{color:"green"}}>Available Room for Adult:2</span></Text>
+              <Text><span style={{color:"blue"}}>Available Room for children:3</span></Text>
             </ModalBody>
             <ModalFooter>
               <Button onClick={onClose}>Close</Button>

@@ -1,3 +1,4 @@
+//context api
 import React from "react";
 import Reducer from "../Reducer/Reducer";
 export const Mycontext = React.createContext();

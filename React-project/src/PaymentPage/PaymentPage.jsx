@@ -251,7 +251,7 @@ const PaymentPage = () => {
               >
                 <Box>Name on Card*</Box>
                 <input
-                  type="text"
+                  type="password"
                   name=""
                   id=""
                   style={{
@@ -263,7 +263,7 @@ const PaymentPage = () => {
                   Debit/Credit card number*
                 </Box>
                 <input
-                  type="text"
+                  type="password"
                   name=""
                   id=""
                   style={{
@@ -323,7 +323,7 @@ const PaymentPage = () => {
                   security code
                   <br />
                   <input
-                    type="text"
+                    type="password"
                     name=""
                     id=""
                     style={{
