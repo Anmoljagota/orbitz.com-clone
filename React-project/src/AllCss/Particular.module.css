@@ -5,11 +5,9 @@
     box-sizing: border-box;
 } */
 .mainbox{
-/* border:1px solid black; */
-width: 50%;
+width: 60%;
 margin: auto;
 height: 250vw;
-background-color: white;
 margin-top: 70px;
 }
 .minimain{

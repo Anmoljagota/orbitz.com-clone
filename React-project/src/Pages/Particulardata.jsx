@@ -26,13 +26,13 @@ const Particulardata = () => {
   }, []);
 
   return (
-    <div>
+    <div style={{ background:"#d4d4d4"}}>
       <Form />
     <Link to="/payment"> <Box className={Styles.mainbox}>
         {data &&
           data.map((items, i) => (
-              <Skeleton isLoaded={state.IsLoading}>
-            <Box key={i} style={{ marginTop: "10px", display: "flex" }}>
+              <Skeleton isLoaded={state.IsLoading} >
+            <Box key={i} style={{ marginTop: "10px", display: "flex" , background:"white" }}>
               <Box
                 style={{
                   width: "35%",
@@ -40,16 +40,17 @@ const Particulardata = () => {
                   backgroundColor: "white",
                 }}
               >
-                <img src={items.images} alt="error" />
+                <img src={items.images} alt="error" height="100%" width="100%" />
               </Box>
               
               <Box
                 style={{
-                  width: "65%",
-                  height: "140px",
+                  width: "70%",
+                  height: "auto",
                   margin: "auto",
                   marginLeft: "15px",
-                  backgroundColor: "white",
+                  backgroundColor: "white"
+               
                 }}
               >
                 <h1

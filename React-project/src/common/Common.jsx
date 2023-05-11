@@ -5,11 +5,9 @@ import {
   Center,
   Select,
   Box,
-  Stack,
   InputLeftElement,
   InputGroup,
   Input,
-  InputRightElement,
   Button,
   Skeleton,
 } from "@chakra-ui/react";
@@ -17,7 +15,6 @@ import Footer from "../components/Footer";
 import { NavLink } from "react-router-dom";
 import Styles1 from "../AllCss/booking.module.css";
 import data from "../Json-data/db.json";
-import data1 from "../Json-data/db1.json";
 import { PhoneIcon } from "@chakra-ui/icons";
 import Form from "../components/Form";
 import Accordion from "../components/Accordion";
@@ -29,50 +26,48 @@ const Links = [
   { path: "/thingtodo", title: "Things to do" },
   { path: "/cruises", title: "Cruises" },
 ];
-const Common = ({ details, newdata }) => {
+const Common = ({ details }) => {
   const [isloading, setisLoading] = useState(false);
   setTimeout(() => {
     setisLoading(true);
   }, 3000);
   return (
-  
-      <Box className={Styles1.upperdiv}>
-        <Skeleton isLoaded={isloading}>
-          <Box className={Styles.images}>
-        
-              <Center>
-                <Box className={Styles.formcenter}>
-                  <Box>
-                    <Box
-                      w="100%"
-                      p={4}
-                      color="white"
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "space-around",
-                        width: "40%",
-                        margin: "auto",
+    <Box className={Styles1.upperdiv}>
+      <Skeleton isLoaded={isloading}>
+        <Box className={Styles.images}>
+          <Center>
+            <Box className={Styles.formcenter}>
+              <Box>
+                <Box
+                  w="100%"
+                  p={4}
+                  color="white"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-around",
+                    width: "40%",
+                    margin: "auto",
+                  }}
+                >
+                  {Links.map((link) => (
+                    <NavLink
+                      className={({ isActive }) => {
+                        return isActive ? Styles1.active : Styles1.default;
                       }}
+                      key={link.path}
+                      to={link.path}
+                      end
                     >
-                      {Links.map((link) => (
-                        <NavLink
-                          className={({ isActive }) => {
-                            return isActive ? Styles1.active : Styles1.default;
-                          }}
-                          key={link.path}
-                          to={link.path}
-                          end
-                        >
-                          {link.title}
-                        </NavLink>
-                      ))}
-                    </Box>
-                  </Box>
-                  <Form />
+                      {link.title}
+                    </NavLink>
+                  ))}
                 </Box>
-              </Center>
-              <div className={Styles1.forallnew}>
+              </Box>
+              <Form />
+            </Box>
+          </Center>
+          <div className={Styles1.forallnew}>
             <Center>
               <Box className={Styles1.main}>
                 <Box className={Styles1.all}>
@@ -118,7 +113,7 @@ const Common = ({ details, newdata }) => {
                     marginTop: "30px",
                     border: "1px solid black",
                     justifyContent: "space-between",
-                    backgroundColor:"white"
+                    backgroundColor: "white",
                   }}
                 >
                   <img
@@ -153,7 +148,7 @@ const Common = ({ details, newdata }) => {
                     marginTop: "30px",
                     border: "1px solid black",
                     justifyContent: "space-between",
-                    backgroundColor:"white"
+                    backgroundColor: "white",
                   }}
                 >
                   <img
@@ -272,13 +267,12 @@ const Common = ({ details, newdata }) => {
                 </Box>
               </Box>
             </Center>
-            </div>
-            <Accordion />
-            <Footer />
-          </Box>
-        </Skeleton>
-      </Box>
-  
+          </div>
+          <Accordion />
+          <Footer />
+        </Box>
+      </Skeleton>
+    </Box>
   );
 };
 
