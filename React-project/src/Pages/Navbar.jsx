@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 import {
   Popover,
   PopoverTrigger,
@@ -13,10 +13,11 @@ import {
   Input,
   Portal,
   Button,
+  Stack,
+  Flex,
 } from "@chakra-ui/react";
 import {
   Box,
- 
   Menu,
   MenuButton,
   MenuItem,
@@ -29,7 +30,9 @@ import { ChevronDownIcon } from "@chakra-ui/icons";
 
 const Navbar = () => {
   return (
-    <Box className={Styles.bigparent}>
+    <nav className={Styles.bigparent}>
+      <Flex justifyContent="space-between" alignItems="center" border="3px solid red" width="100%" >
+
       <Box className={Styles.firstchild}>
         <Link to="/">
           <img
@@ -42,7 +45,7 @@ const Navbar = () => {
           <MenuButton
             as={Text}
             righticon={<ChevronDownIcon />}
-            style={{ color: "white" }}
+            style={{ color: "white" , cursor:"pointer"}}
           >
             More travel
           </MenuButton>
@@ -61,40 +64,52 @@ const Navbar = () => {
         <Link to="/property">List your property</Link>
         <Link to="/support">Supports</Link>
         <Link to="/trips">Trips</Link>
-      <Box style={{color:"white"}}>
-
-
+        <Box style={{ color: "white" }}>
           {" "}
           <Popover>
             <PopoverTrigger>
-             <h1 style={{cursor:"pointer",marginTop:"15px"}}>Sign in</h1>
+              <h1 style={{ cursor: "pointer", marginTop: "15px" }}>Sign in</h1>
             </PopoverTrigger>
             <Portal>
               <PopoverContent>
                 <PopoverArrow />
-                <PopoverHeader><span style={{width:"90%",fontSize:"17px",fontWeight:"700"}}>Members can access discounts, points and special features</span></PopoverHeader>
+                <PopoverHeader>
+                  <span
+                    style={{
+                      width: "90%",
+                      fontSize: "17px",
+                      fontWeight: "700",
+                    }}
+                    >
+                    Members can access discounts, points and special features
+                  </span>
+                </PopoverHeader>
                 <PopoverCloseButton />
                 <PopoverBody>
-                <Link to="/login"><button className={Styles1.popbtn}>Sign in</button></Link>
+                  <Link to="/login">
+                    <button className={Styles1.popbtn}>Sign in</button>
+                  </Link>
                 </PopoverBody>
                 <PopoverBody>
-               <Link to="/signup"> <span className={Styles1.createaccount}>Create a free account</span></Link>
+                  <Link to="/signup">
+                    {" "}
+                    <span className={Styles1.createaccount}>
+                      Create a free account
+                    </span>
+                  </Link>
                 </PopoverBody>
-                <PopoverBody>
-               List of favourites
-                </PopoverBody>
-                <PopoverBody>
-               Loyality of program
-                </PopoverBody>
-                <PopoverFooter style={{marginTop:"20px"}}>Feedback</PopoverFooter>
+                <PopoverBody>List of favourites</PopoverBody>
+                <PopoverBody>Loyality of program</PopoverBody>
+                <PopoverFooter style={{ marginTop: "20px" }}>
+                  Feedback
+                </PopoverFooter>
               </PopoverContent>
             </Portal>
           </Popover>
-     
+        </Box>
       </Box>
-       
-      </Box>
-    </Box>
+                    </Flex>
+    </nav>
   );
 };
 

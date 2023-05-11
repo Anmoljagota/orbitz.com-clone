@@ -41,7 +41,7 @@ const PaymentPage = () => {
         style={{
           width: "90%",
           margin: "auto",
-       
+          borderRadius:"8px",
           display: "flex",
           backgroundColor: "white",
           marginTop: "25px",
@@ -51,7 +51,7 @@ const PaymentPage = () => {
         <span>
           <CheckCircleIcon />
         </span>
-        <Box style={{ marginLeft: "30px" }}>
+        <Box style={{ marginLeft: "30px"}}>
           <h1 style={{ color: "black", fontWeight: "500", fontSize: "15px" }}>
             Free cancellation before Sun, Oct 16, 11:59am (property local time)
           </h1>
@@ -65,14 +65,13 @@ const PaymentPage = () => {
         style={{
           width: "90%",
           margin: "auto",
-       
           height: "110vw",
           marginTop: "15px",
           display: "flex",
         }}
       >
         <Box style={{ width: "70%", color: "black" }}>
-          <Box style={{ backgroundColor: "white", height: "25vw" }}>
+          <Box style={{ backgroundColor: "white", height: "25vw" ,padding:"25px",borderRadius:"5px" }}>
             <span
               style={{ color: "black", fontWeight: "500", fontSize: "20px" }}
             >
@@ -133,7 +132,7 @@ const PaymentPage = () => {
             </Box>
           </Box>
           <Box
-            style={{ backgroundColor: "white", marginTop: "25px" }}
+            style={{ backgroundColor: "white", marginTop: "25px"}}
             className={Styles.border}
           >
             <Box
@@ -181,7 +180,8 @@ const PaymentPage = () => {
               width: "100%",
               margin: "auto",
               marginTop: "20px",
-              
+              padding:"25px 10px",
+              borderRadius:"8px"
             }}
           >
             <Box
@@ -230,7 +230,6 @@ const PaymentPage = () => {
                   display: "flex",
                   justifyContent: "space-between",
                   width: "55%",
-
                   marginTop: "20px",
                  
                 }}
@@ -278,6 +277,7 @@ const PaymentPage = () => {
                   justifyContent: "space-between",
                   width: "25%",
                   marginTop: "20px",
+                  
                 }}
               >
                 <select
@@ -350,11 +350,11 @@ const PaymentPage = () => {
               </Box>
             </Box>
           </Box>
-          <Box style={{backgroundColor:"white"}}>
+          <Box style={{backgroundColor:"white",padding:"20px"}}>
             <span
               style={{ fontSize: "25px", fontWeight: "700", color: "black" }}
             >
-              Important Information about you Booking
+              Important Information about your Booking
             </span>
             <br />
             <Box

@@ -18,7 +18,7 @@ import { NavLink } from "react-router-dom";
 import Styles1 from "../AllCss/booking.module.css";
 import data from "../Json-data/db.json";
 import data1 from "../Json-data/db1.json";
-import { PhoneIcon, CheckIcon } from "@chakra-ui/icons";
+import { PhoneIcon } from "@chakra-ui/icons";
 import Form from "../components/Form";
 import Accordion from "../components/Accordion";
 const Links = [
@@ -31,7 +31,6 @@ const Links = [
 ];
 const Common = ({ details, newdata }) => {
   const [isloading, setisLoading] = useState(false);
-  const { name } = data1;
   setTimeout(() => {
     setisLoading(true);
   }, 3000);

@@ -6,7 +6,7 @@
 
 }
 .bigparent {
- 
+ border: 2px solid red;
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -18,17 +18,18 @@
 }
 
 .firstchild {
+  border: 3px solid blue;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 27%;
-  height: auto;
   align-items: center;
 background-color: #00253c;
   margin-left: 30px;
-  background: none;
   cursor: pointer;
+  gap:20px
 }
 .secondchild {
+  border: 2px solid red;
   background-color: #00253c;
   width: 35%;
   display: flex;

@@ -21,7 +21,7 @@ const Accodion = () => {
         <Grid templateColumns="repeat(3, 1fr)" gap={6}>
           {name.map((item) => (
             <GridItem w="100%" h="10" className={Styles1.accordion}>
-              <Accordion defaultIndex={[0]} allowMultiple>
+              <Accordion defaultIndex={[0]} >
                 <AccordionItem>
                   <h2>
                     <AccordionButton>
